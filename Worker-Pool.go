@@ -23,6 +23,7 @@ func NewWorker(id int, wg *sync.WaitGroup) *Worker {
 }
 
 
+
 func (w *Worker) start() {
 	defer w.wg.Done()
 	for job := range w.jobChan {
